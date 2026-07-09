@@ -59,4 +59,4 @@ print(f"\nCleaned data sample:\n{df.head()}")
 
 # ---- SAVE CLEANED DATA ----
 df.to_csv(CLEAN_DATA_PATH, index=False)
-print(f"\n✅ Cleaned data saved to: {CLEAN_DATA_PATH}")
+print(f"\n Cleaned data saved to: {CLEAN_DATA_PATH}")

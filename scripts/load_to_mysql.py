@@ -22,10 +22,10 @@ def create_database():
         )
         cursor = conn.cursor()
         cursor.execute(f"CREATE DATABASE IF NOT EXISTS {DB_NAME}")
-        print(f"✅ Database '{DB_NAME}' ready!")
+        print(f" Database '{DB_NAME}' ready!")
         conn.close()
     except Error as e:
-        print(f"❌ Error: {e}")
+        print(f" Error: {e}")
 
 def clean_value(val):
     if val is None:
@@ -72,7 +72,7 @@ def load_data():
                 year INT
             )
         """)
-        print("✅ Table created!")
+        print(" Table created!")
 
         insert_query = """
             INSERT INTO amazon_sales 
@@ -110,11 +110,11 @@ def load_data():
 
         cursor.executemany(insert_query, rows)
         conn.commit()
-        print(f"✅ {cursor.rowcount} rows inserted into MySQL!")
+        print(f" {cursor.rowcount} rows inserted into MySQL!")
         conn.close()
 
     except Error as e:
-        print(f"❌ Error: {e}")
+        print(f" Error: {e}")
 
 create_database()
 load_data()

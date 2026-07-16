@@ -1,14 +1,10 @@
-# ============================================
-# Project 1: E-Commerce Sales Dashboard
-# Script 2: Load Clean Data into MySQL
-# ============================================
-
+# LOAD TO My SQL
 import pandas as pd
 import mysql.connector
 from mysql.connector import Error
 import numpy as np
 
-# ---- CONFIG ----
+# CONFIG
 DB_HOST = "localhost"
 DB_USER = "root"
 DB_PASSWORD = "root1234"
